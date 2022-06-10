@@ -22,7 +22,6 @@ class GenreViewModel @Inject constructor(
 ) : BaseViewModel(application) {
 
     val data = MutableLiveData<AppResponse<List<Genre>>>()
-
     var selectionTracker : SelectionTracker<Long>? = null
 
     init {
@@ -36,5 +35,7 @@ class GenreViewModel @Inject constructor(
             }
         }
     }
+
+
 
 }
