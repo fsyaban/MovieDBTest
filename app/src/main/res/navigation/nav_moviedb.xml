@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/moviedb_auth"
+    app:startDestination="@id/genreFragment">
+
+    <fragment
+        android:id="@+id/genreFragment"
+        android:name="com.bootcamp.moviedbtest.fragment.genre.GenreFragment"
+        android:label="GenreFragment" >
+        <action
+            android:id="@+id/genreToDiscover"
+            app:destination="@id/discoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/discoverFragment"
+        android:name="com.bootcamp.moviedbtest.fragment.discover.DiscoverFragment"
+        android:label="DiscoverFragment">
+        <argument
+            android:name="genres"
+            app:argType="string"/>
+        <action
+            android:id="@+id/discoverToDetail"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.bootcamp.moviedbtest.fragment.movie_detail.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+
+        <argument
+            android:name="movieId"
+            app:argType="integer"/>
+    </fragment>
+</navigation>
