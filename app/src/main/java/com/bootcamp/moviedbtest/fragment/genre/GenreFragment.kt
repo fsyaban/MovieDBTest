@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class GenreFragment : BaseFragment<GenreViewModel, GenreLayoutBinding>() {
     override val vm: GenreViewModel by viewModels()
     override val layoutResourceId: Int = R.layout.genre_layout
-    val adapter = GenreAdapter({ vm.selectionTracker?.selection?.toMutableList().orEmpty() })
+    val adapter = GenreAdapter { vm.selectionTracker?.selection?.toMutableList().orEmpty() }
 
     override fun initBinding(binding: GenreLayoutBinding) {
         super.initBinding(binding)

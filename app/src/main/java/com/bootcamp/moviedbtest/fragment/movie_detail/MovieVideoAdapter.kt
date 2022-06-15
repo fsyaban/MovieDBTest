@@ -17,7 +17,7 @@ class MovieVideoAdapter(val showVideo:(String)-> Unit) : RecyclerView.Adapter<Mo
         fun bind(data: Result) {
             binding.tvTitle.text = data.name
             Glide.with(binding.root)
-                .load("https://img.youtube.com/vi/" + data.key + "/maxresdefault.jpg")
+                .load("https://img.youtube.com/vi/" + data.key + "/default.jpg")
                 .centerCrop()
                 .into(binding.imgPoster)
             binding.root.setOnClickListener {

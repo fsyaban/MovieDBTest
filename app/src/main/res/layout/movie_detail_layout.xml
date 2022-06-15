@@ -173,13 +173,16 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/videoHeader"
                         android:orientation="vertical">
-                        <androidx.fragment.app.FragmentContainerView
+
+                        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                             android:layout_marginTop="8dp"
                             android:id="@+id/fragmentVideoTrailer"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             app:layout_constraintBottom_toTopOf="@+id/rvVideo"
-                            app:layout_constraintStart_toStartOf="parent"/>
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:enableAutomaticInitialization="false"/>
+
 
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/rvVideo"

@@ -15,4 +15,5 @@ fun DependencyHandler.libraries() {
     vmLifeCycle()
     testUnit()
     paging()
+    youtube()
 }
